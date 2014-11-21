@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @piece.name %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @piece.medium %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @piece.description %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @piece.height %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @piece.length %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @piece.width %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @piece.weight %>
+</p>
+
+<p>
+  <strong>Original price:</strong>
+  <%= @piece.original_price %>
+</p>
+
+<%= link_to 'Edit', edit_piece_path(@piece) %> |
+<%= link_to 'Back', pieces_path %>

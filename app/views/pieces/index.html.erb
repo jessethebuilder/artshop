@@ -1,0 +1,41 @@
+<h1>Listing pieces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Medium</th>
+      <th>Description</th>
+      <th>Height</th>
+      <th>Length</th>
+      <th>Width</th>
+      <th>Weight</th>
+      <th>Original price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pieces.each do |piece| %>
+      <tr>
+        <td><%= piece.name %></td>
+        <td><%= piece.medium %></td>
+        <td><%= piece.description %></td>
+        <td><%= piece.height %></td>
+        <td><%= piece.length %></td>
+        <td><%= piece.width %></td>
+        <td><%= piece.weight %></td>
+        <td><%= piece.original_price %></td>
+        <td><%= link_to 'Show', piece %></td>
+        <td><%= link_to 'Edit', edit_piece_path(piece) %></td>
+        <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Piece', new_piece_path %>
