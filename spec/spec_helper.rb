@@ -38,6 +38,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  require 'support/request_helper'
+#  require 'support/request_helper'
   config.include RequestHelper
 end
